@@ -19,7 +19,12 @@ export function Toggle({
 
   const handleClick = () => {
     if (disabled) return;
-    setInternalChecked(!isChecked);
+    const nextChecked = !isChecked;
+    if (controlledChecked !== undefined) {
+      onChange?.(nextChecked);
+    } else {
+      setInternalChecked(nextChecked);
+    }
   };
 
   return (

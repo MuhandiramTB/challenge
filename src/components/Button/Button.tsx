@@ -19,8 +19,11 @@ export function Button({
 }: ButtonProps) {
   return (
     <button
+      type="button"
       className={`btn btn-${variant} ${disabled ? "btn-disabled" : ""} ${className}`.trim()}
+      disabled={disabled || loading}
       onClick={onClick}
+      aria-busy={loading}
     >
       {loading ? <span className="btn-spinner">Loading...</span> : children}
     </button>
