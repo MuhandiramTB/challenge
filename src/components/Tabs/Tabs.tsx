@@ -12,11 +12,15 @@ interface TabsProps {
 }
 
 export function Tabs({ tabs, defaultIndex = 0, onChange }: TabsProps) {
-  const [activeIndex, setActiveIndex] = useState(defaultIndex);
+  const clampedIndex = Math.min(
+    Math.max(0, defaultIndex),
+    Math.max(0, tabs.length - 1)
+  );
+  const [activeIndex, setActiveIndex] = useState(clampedIndex);
 
   const handleTabClick = (index: number) => {
     setActiveIndex(index);
-    onChange?.(index + 1);
+    onChange?.(index);
   };
 
   return (

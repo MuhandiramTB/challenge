@@ -22,8 +22,9 @@ export function Dropdown({
 }: DropdownProps) {
   const [isOpen, setIsOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
+  const safeItems = Array.isArray(items) ? items : [];
 
-  const selectedItem = items.find((item) => item.value === value);
+  const selectedItem = safeItems.find((item) => item.value === value);
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
@@ -67,7 +68,7 @@ export function Dropdown({
       </div>
       {isOpen && (
         <ul className="dropdown-menu" role="listbox">
-          {items.map((item) => (
+          {safeItems.map((item) => (
             <li
               key={item.value}
               className={`dropdown-item ${item.value === value ? "dropdown-item-selected" : ""}`}
