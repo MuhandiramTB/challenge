@@ -1,4 +1,4 @@
-import { useState, ReactNode } from "react";
+import { useState, useEffect, ReactNode } from "react";
 
 interface AlertProps {
   children: ReactNode;
@@ -14,6 +14,11 @@ export function Alert({
   onDismiss,
 }: AlertProps) {
   const [visible, setVisible] = useState(true);
+
+  // Re-show alert when content changes (e.g. parent shows a new message)
+  useEffect(() => {
+    setVisible(true);
+  }, [children]);
 
   if (!visible) return null;
 

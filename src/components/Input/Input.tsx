@@ -1,4 +1,4 @@
-import { ChangeEvent, FocusEvent } from "react";
+import { ChangeEvent, FocusEvent, useId } from "react";
 
 interface InputProps {
   value?: string;
@@ -23,7 +23,8 @@ export function Input({
   onFocus,
   onBlur,
 }: InputProps) {
-  const id = label ? `input-${label.toLowerCase().replace(/\s+/g, "-")}` : undefined;
+  const fallbackId = useId();
+  const id = label ? `input-${label.toLowerCase().replace(/\s+/g, "-")}` : fallbackId;
 
   return (
     <div className="input-group">
