@@ -1,4 +1,5 @@
 import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import { Card } from './Card';
 
 describe('Card', () => {
@@ -36,6 +37,20 @@ describe('Card', () => {
     it('supports custom className', () => {
       const { container } = render(<Card className="my-card"><p>Body</p></Card>);
       expect(container.querySelector('.my-card')).toBeInTheDocument();
+    });
+  });
+
+  describe('interactions', () => {
+    it('handles user interaction with actions slot', async () => {
+      const user = userEvent.setup();
+      const onAction = jest.fn();
+      render(
+        <Card title="Card" actions={<button onClick={onAction}>Action</button>}>
+          <p>Body</p>
+        </Card>
+      );
+      await user.click(screen.getByRole('button', { name: /action/i }));
+      expect(onAction).toHaveBeenCalledTimes(1);
     });
   });
 
