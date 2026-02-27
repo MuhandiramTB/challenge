@@ -62,8 +62,10 @@ describe('Card', () => {
     });
 
     it('renders image with empty alt when title is missing', () => {
-      render(<Card image="/img.jpg"><p>Body</p></Card>);
-      expect(screen.getByRole('img')).toHaveAttribute('alt', '');
+      const { container } = render(<Card image="/img.jpg"><p>Body</p></Card>);
+      const img = container.querySelector('img.card-image');
+      expect(img).toBeInTheDocument();
+      expect(img).toHaveAttribute('alt', '');
     });
   });
 });

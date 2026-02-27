@@ -2,7 +2,7 @@
  * Integration test: Modal with form inside
  * Tests opening modal, interacting with content, and closing.
  */
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { useState } from 'react';
 import { Modal } from '../../components/Modal/Modal';
@@ -34,7 +34,8 @@ describe('Integration: Modal with form inside', () => {
     expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
     await user.click(screen.getByRole('button', { name: /open/i }));
     expect(screen.getByRole('dialog', { name: /form modal/i })).toBeInTheDocument();
-    await user.type(screen.getByLabelText(/field/i), 'test');
+    const field = screen.getByLabelText(/field/i);
+    fireEvent.change(field, { target: { value: 'test' } });
     expect(screen.getByLabelText(/field/i)).toHaveValue('test');
     await user.click(screen.getByRole('button', { name: /save/i }));
     expect(screen.queryByRole('dialog')).not.toBeInTheDocument();

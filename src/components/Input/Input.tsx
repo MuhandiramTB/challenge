@@ -23,8 +23,11 @@ export function Input({
   onFocus,
   onBlur,
 }: InputProps) {
-  const fallbackId = useId();
-  const id = label ? `input-${label.toLowerCase().replace(/\s+/g, "-")}` : fallbackId;
+  // Always use a unique ID to avoid duplicate IDs when multiple inputs share the same label
+  const uniqueId = useId();
+  const id = label
+    ? `input-${label.toLowerCase().replace(/\s+/g, "-")}-${uniqueId.replace(/:/g, "")}`
+    : uniqueId;
 
   return (
     <div className="input-group">

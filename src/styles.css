@@ -287,6 +287,9 @@ body {
   background: #e8edff;
   font-weight: 500;
 }
+.dropdown-item-highlighted {
+  background: #f0f4ff;
+}
 
 /* ── Toggle ── */
 .toggle {
