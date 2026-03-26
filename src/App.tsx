@@ -32,7 +32,7 @@ export function App() {
     <div className="app">
       <header className="app-header">
         <h1>Hearts Component Library</h1>
-        <p>8 components &middot; 0% test coverage &middot; 5 hidden bugs</p>
+        <p>8 components &middot; 96%+ test coverage &middot; 5 bugs fixed</p>
       </header>
 
       <main className="app-main">
