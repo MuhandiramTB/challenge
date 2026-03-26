@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1774512315134" clover="3.2.0">
+  <project timestamp="1774512315135" name="All files">
+    <metrics statements="150" coveredstatements="145" conditionals="126" coveredconditionals="119" methods="44" coveredmethods="40" elements="320" coveredelements="304" complexity="0" loc="150" ncloc="150" packages="9" files="9" classes="9"/>
+    <package name="src">
+      <metrics statements="26" coveredstatements="23" conditionals="6" coveredconditionals="6" methods="10" coveredmethods="7"/>
+      <file name="App.tsx" path="D:\challenge\src\App.tsx">
+        <metrics statements="26" coveredstatements="23" conditionals="6" coveredconditionals="6" methods="10" coveredmethods="7"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="25" count="18" type="stmt"/>
+        <line num="26" count="18" type="stmt"/>
+        <line num="27" count="18" type="stmt"/>
+        <line num="28" count="18" type="stmt"/>
+        <line num="29" count="18" type="stmt"/>
+        <line num="31" count="18" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="68" count="4" type="stmt"/>
+        <line num="84" count="1" type="stmt"/>
+        <line num="87" count="1" type="stmt"/>
+        <line num="155" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.Alert">
+      <metrics statements="10" coveredstatements="10" conditionals="5" coveredconditionals="5" methods="3" coveredmethods="3"/>
+      <file name="Alert.tsx" path="D:\challenge\src\components\Alert\Alert.tsx">
+        <metrics statements="10" coveredstatements="10" conditionals="5" coveredconditionals="5" methods="3" coveredmethods="3"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="16" count="106" type="stmt"/>
+        <line num="19" count="106" type="stmt"/>
+        <line num="20" count="42" type="stmt"/>
+        <line num="23" count="106" type="cond" truecount="1" falsecount="0"/>
+        <line num="25" count="102" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="27" count="2" type="stmt"/>
+        <line num="30" count="102" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.Button">
+      <metrics statements="2" coveredstatements="2" conditionals="10" coveredconditionals="10" methods="1" coveredmethods="1"/>
+      <file name="Button.tsx" path="D:\challenge\src\components\Button\Button.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="10" coveredconditionals="10" methods="1" coveredmethods="1"/>
+        <line num="12" count="4" type="stmt"/>
+        <line num="20" count="145" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.Card">
+      <metrics statements="2" coveredstatements="2" conditionals="9" coveredconditionals="9" methods="1" coveredmethods="1"/>
+      <file name="Card.tsx" path="D:\challenge\src\components\Card\Card.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="9" coveredconditionals="9" methods="1" coveredmethods="1"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="18" count="44" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.Dropdown">
+      <metrics statements="46" coveredstatements="44" conditionals="47" coveredconditionals="41" methods="14" coveredmethods="13"/>
+      <file name="Dropdown.tsx" path="D:\challenge\src\components\Dropdown\Dropdown.tsx">
+        <metrics statements="46" coveredstatements="44" conditionals="47" coveredconditionals="41" methods="14" coveredmethods="13"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="16" count="3" type="stmt"/>
+        <line num="23" count="64" type="stmt"/>
+        <line num="24" count="64" type="stmt"/>
+        <line num="25" count="64" type="stmt"/>
+        <line num="26" count="64" type="stmt"/>
+        <line num="27" count="64" type="cond" truecount="2" falsecount="0"/>
+        <line num="29" count="170" type="stmt"/>
+        <line num="31" count="64" type="stmt"/>
+        <line num="32" count="22" type="stmt"/>
+        <line num="33" count="15" type="cond" truecount="3" falsecount="0"/>
+        <line num="34" count="8" type="stmt"/>
+        <line num="38" count="22" type="stmt"/>
+        <line num="39" count="22" type="stmt"/>
+        <line num="43" count="64" type="stmt"/>
+        <line num="44" count="36" type="cond" truecount="2" falsecount="0"/>
+        <line num="45" count="18" type="stmt"/>
+        <line num="46" count="8" type="cond" truecount="1" falsecount="1"/>
+        <line num="48" count="28" type="stmt"/>
+        <line num="52" count="64" type="stmt"/>
+        <line num="53" count="5" type="stmt"/>
+        <line num="54" count="5" type="stmt"/>
+        <line num="57" count="64" type="stmt"/>
+        <line num="58" count="8" type="cond" truecount="3" falsecount="0"/>
+        <line num="59" count="4" type="stmt"/>
+        <line num="60" count="4" type="cond" truecount="5" falsecount="0"/>
+        <line num="61" count="2" type="stmt"/>
+        <line num="63" count="2" type="stmt"/>
+        <line num="66" count="8" type="cond" truecount="1" falsecount="0"/>
+        <line num="67" count="1" type="stmt"/>
+        <line num="69" count="8" type="cond" truecount="1" falsecount="0"/>
+        <line num="70" count="2" type="stmt"/>
+        <line num="71" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="72" count="1" type="stmt"/>
+        <line num="73" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="76" count="1" type="stmt"/>
+        <line num="79" count="8" type="cond" truecount="1" falsecount="0"/>
+        <line num="80" count="1" type="stmt"/>
+        <line num="81" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="82" count="0" type="stmt"/>
+        <line num="83" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="86" count="1" type="stmt"/>
+        <line num="91" count="64" type="stmt"/>
+        <line num="100" count="4" type="stmt"/>
+        <line num="115" count="38" type="stmt"/>
+        <line num="119" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.Input">
+      <metrics statements="5" coveredstatements="5" conditionals="14" coveredconditionals="14" methods="1" coveredmethods="1"/>
+      <file name="Input.tsx" path="D:\challenge\src\components\Input\Input.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="14" coveredconditionals="14" methods="1" coveredmethods="1"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="15" count="4" type="stmt"/>
+        <line num="27" count="54" type="stmt"/>
+        <line num="28" count="54" type="cond" truecount="2" falsecount="0"/>
+        <line num="32" count="54" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.Modal">
+      <metrics statements="34" coveredstatements="34" conditionals="13" coveredconditionals="12" methods="7" coveredmethods="7"/>
+      <file name="Modal.tsx" path="D:\challenge\src\components\Modal\Modal.tsx">
+        <metrics statements="34" coveredstatements="34" conditionals="13" coveredconditionals="12" methods="7" coveredmethods="7"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="14" count="32" type="stmt"/>
+        <line num="15" count="32" type="stmt"/>
+        <line num="17" count="32" type="stmt"/>
+        <line num="18" count="32" type="stmt"/>
+        <line num="19" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="22" count="32" type="stmt"/>
+        <line num="23" count="4" type="cond" truecount="3" falsecount="0"/>
+        <line num="24" count="2" type="stmt"/>
+        <line num="26" count="6" type="stmt"/>
+        <line num="27" count="2" type="cond" truecount="0" falsecount="1"/>
+        <line num="28" count="2" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="30" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="31" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="36" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="43" count="32" type="cond" truecount="1" falsecount="0"/>
+        <line num="44" count="12" type="stmt"/>
+        <line num="45" count="12" type="stmt"/>
+        <line num="46" count="12" type="stmt"/>
+        <line num="48" count="12" type="stmt"/>
+        <line num="51" count="32" type="stmt"/>
+        <line num="52" count="32" type="stmt"/>
+        <line num="53" count="32" type="stmt"/>
+        <line num="54" count="32" type="stmt"/>
+        <line num="58" count="32" type="cond" truecount="1" falsecount="0"/>
+        <line num="60" count="12" type="stmt"/>
+        <line num="69" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.Tabs">
+      <metrics statements="11" coveredstatements="11" conditionals="5" coveredconditionals="5" methods="4" coveredmethods="4"/>
+      <file name="Tabs.tsx" path="D:\challenge\src\components\Tabs\Tabs.tsx">
+        <metrics statements="11" coveredstatements="11" conditionals="5" coveredconditionals="5" methods="4" coveredmethods="4"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="14" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="15" count="30" type="stmt"/>
+        <line num="19" count="30" type="stmt"/>
+        <line num="21" count="30" type="stmt"/>
+        <line num="22" count="5" type="stmt"/>
+        <line num="23" count="5" type="stmt"/>
+        <line num="26" count="30" type="stmt"/>
+        <line num="28" count="30" type="stmt"/>
+        <line num="32" count="85" type="stmt"/>
+        <line num="36" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.Toggle">
+      <metrics statements="14" coveredstatements="14" conditionals="17" coveredconditionals="17" methods="3" coveredmethods="3"/>
+      <file name="Toggle.tsx" path="D:\challenge\src\components\Toggle\Toggle.tsx">
+        <metrics statements="14" coveredstatements="14" conditionals="17" coveredconditionals="17" methods="3" coveredmethods="3"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="16" count="50" type="stmt"/>
+        <line num="18" count="50" type="cond" truecount="2" falsecount="0"/>
+        <line num="20" count="50" type="stmt"/>
+        <line num="21" count="9" type="cond" truecount="1" falsecount="0"/>
+        <line num="22" count="8" type="stmt"/>
+        <line num="23" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="24" count="4" type="stmt"/>
+        <line num="26" count="4" type="stmt"/>
+        <line num="30" count="50" type="stmt"/>
+        <line num="36" count="2" type="cond" truecount="3" falsecount="0"/>
+        <line num="37" count="2" type="stmt"/>
+        <line num="38" count="2" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

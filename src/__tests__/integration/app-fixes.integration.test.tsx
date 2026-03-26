@@ -18,7 +18,7 @@ describe('Integration: App (all fixes)', () => {
   it('Button: loading button does not trigger click', async () => {
     const user = userEvent.setup();
     render(<App />);
-    await user.click(screen.getByRole('button', { name: /saving/i }));
+    await user.click(screen.getByRole('button', { name: /loading/i }));
     expect(screen.getByText(/clicked 0x/)).toBeInTheDocument();
   });
 

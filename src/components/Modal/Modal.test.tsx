@@ -74,6 +74,46 @@ describe('Modal', () => {
     });
   });
 
+  describe('focus trap', () => {
+    it('traps focus with Tab key — wraps from last to first focusable element', async () => {
+      const user = userEvent.setup();
+      const onClose = jest.fn();
+      render(
+        <Modal isOpen={true} onClose={onClose} title="Trap">
+          <input data-testid="first" />
+          <button>Action</button>
+        </Modal>
+      );
+      // Focus the first input
+      const firstInput = screen.getByTestId('first');
+      firstInput.focus();
+      // The close button is the last focusable element
+      const closeBtn = screen.getByRole('button', { name: /close/i });
+      closeBtn.focus();
+      // Tab from last element should wrap to first
+      await user.tab();
+      // After wrapping, focus should be on the first focusable (the input)
+      expect(document.activeElement).toBe(firstInput);
+    });
+
+    it('traps focus with Shift+Tab — wraps from first to last focusable element', async () => {
+      const user = userEvent.setup();
+      const onClose = jest.fn();
+      render(
+        <Modal isOpen={true} onClose={onClose} title="Trap">
+          <input data-testid="first" />
+          <button>Action</button>
+        </Modal>
+      );
+      const firstInput = screen.getByTestId('first');
+      firstInput.focus();
+      // Shift+Tab from first element should wrap to last
+      await user.tab({ shift: true });
+      const closeBtn = screen.getByRole('button', { name: /close/i });
+      expect(document.activeElement).toBe(closeBtn);
+    });
+  });
+
   describe('edge cases', () => {
     it('does not call onClose when clicking inside modal content', async () => {
       const user = userEvent.setup();

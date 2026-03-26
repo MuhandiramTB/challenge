@@ -70,6 +70,26 @@ describe('Toggle', () => {
     });
   });
 
+  describe('keyboard interaction', () => {
+    it('toggles with Enter key', async () => {
+      const user = userEvent.setup();
+      render(<Toggle label="KB" />);
+      const switchEl = screen.getByRole('switch', { name: /kb/i });
+      switchEl.focus();
+      await user.keyboard('{Enter}');
+      expect(switchEl).toHaveAttribute('aria-checked', 'true');
+    });
+
+    it('toggles with Space key', async () => {
+      const user = userEvent.setup();
+      render(<Toggle label="KB" />);
+      const switchEl = screen.getByRole('switch', { name: /kb/i });
+      switchEl.focus();
+      await user.keyboard(' ');
+      expect(switchEl).toHaveAttribute('aria-checked', 'true');
+    });
+  });
+
   describe('accessibility', () => {
     it('has role="switch" and aria-checked', () => {
       render(<Toggle label="A11y" />);

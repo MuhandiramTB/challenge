@@ -53,6 +53,57 @@ describe('Dropdown', () => {
     });
   });
 
+  describe('keyboard navigation', () => {
+    it('opens dropdown with Enter key and selects with Enter', async () => {
+      const user = userEvent.setup();
+      const onChange = jest.fn();
+      render(<Dropdown items={defaultItems} onChange={onChange} />);
+      const combobox = screen.getByRole('combobox');
+      combobox.focus();
+      await user.keyboard('{Enter}');
+      expect(screen.getByRole('listbox')).toBeInTheDocument();
+      // First item is highlighted by default, press Enter to select
+      await user.keyboard('{Enter}');
+      expect(onChange).toHaveBeenCalledWith('a');
+    });
+
+    it('navigates with ArrowDown and ArrowUp keys', async () => {
+      const user = userEvent.setup();
+      const onChange = jest.fn();
+      render(<Dropdown items={defaultItems} onChange={onChange} />);
+      const combobox = screen.getByRole('combobox');
+      combobox.focus();
+      // ArrowDown opens the dropdown
+      await user.keyboard('{ArrowDown}');
+      expect(screen.getByRole('listbox')).toBeInTheDocument();
+      // ArrowDown moves to next item
+      await user.keyboard('{ArrowDown}');
+      // Enter selects highlighted item (should be 'b' now)
+      await user.keyboard('{Enter}');
+      expect(onChange).toHaveBeenCalledWith('b');
+    });
+
+    it('navigates with ArrowUp key', async () => {
+      const user = userEvent.setup();
+      const onChange = jest.fn();
+      render(<Dropdown items={defaultItems} onChange={onChange} />);
+      const combobox = screen.getByRole('combobox');
+      combobox.focus();
+      // ArrowUp opens dropdown
+      await user.keyboard('{ArrowUp}');
+      expect(screen.getByRole('listbox')).toBeInTheDocument();
+    });
+
+    it('opens with Space key', async () => {
+      const user = userEvent.setup();
+      render(<Dropdown items={defaultItems} />);
+      const combobox = screen.getByRole('combobox');
+      combobox.focus();
+      await user.keyboard(' ');
+      expect(screen.getByRole('listbox')).toBeInTheDocument();
+    });
+  });
+
   describe('edge cases', () => {
     it('handles empty items array without crash', () => {
       render(<Dropdown items={[]} placeholder="Empty" />);
